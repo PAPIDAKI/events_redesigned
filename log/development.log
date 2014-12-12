@@ -3240,3 +3240,82 @@ Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2014-12-12 15:08:47 +02
 
 
 Started GET "/assets/karaoke.png" for 127.0.0.1 at 2014-12-12 15:08:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRegistrations (20141212134353)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "registrations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "how_heard" varchar(255), "event_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.5ms)[0m  CREATE INDEX "index_registrations_on_event_id" ON "registrations" ("event_id")
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141212134353"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (13.5ms)[0m  [1mINSERT INTO "registrations" ("created_at", "event_id", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 12 Dec 2014 13:50:16 UTC +00:00], ["event_id", 1], ["name", "Larry"], ["updated_at", Fri, 12 Dec 2014 13:50:16 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "registrations" ("created_at", "email", "event_id", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 12 Dec 2014 13:52:55 UTC +00:00], ["email", "moe@stogges.com"], ["event_id", 1], ["name", "Moe"], ["updated_at", Fri, 12 Dec 2014 13:52:55 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mRegistration Load (0.3ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "registrations"[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mRegistration Load (0.4ms)[0m  [1mSELECT "registrations".* FROM "registrations" WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "registrations" WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "registrations" ("created_at", "email", "event_id", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 12 Dec 2014 14:04:07 UTC +00:00], ["email", "moe@stoggies.com"], ["event_id", 3], ["name", "Moe"], ["updated_at", Fri, 12 Dec 2014 14:04:07 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1mSELECT "registrations".* FROM "registrations" WHERE "registrations"."event_id" = ?[0m  [["event_id", 3]]
+  [1m[35m (1.1ms)[0m  begin transaction
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "registrations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Fri, 12 Dec 2014 14:33:33 UTC +00:00], ["updated_at", Fri, 12 Dec 2014 14:33:33 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mRegistration Load (1.0ms)[0m  [1mSELECT "registrations".* FROM "registrations"[0m
+  [1m[35m (1.2ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "registrations" ("created_at", "email", "how_heard", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Fri, 12 Dec 2014 14:45:00 UTC +00:00], ["email", "papidkais@gmail.com"], ["how_heard", "option1"], ["name", "Manolis Papidakis"], ["updated_at", Fri, 12 Dec 2014 14:45:00 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "registrations" SET "how_heard" = ?, "updated_at" = ? WHERE "registrations"."id" = 5  [["how_heard", "option2"], ["updated_at", Fri, 12 Dec 2014 14:45:24 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "registrations" SET "how_heard" = ?, "updated_at" = ? WHERE "registrations"."id" = 5[0m  [["how_heard", nil], ["updated_at", Fri, 12 Dec 2014 14:47:12 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "registrations" ("created_at", "email", "how_heard", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 12 Dec 2014 14:49:11 UTC +00:00], ["email", "papa@fmgs.com"], ["how_heard", "Newsletter"], ["name", "Spiros"], ["updated_at", Fri, 12 Dec 2014 14:49:11 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "registrations" SET "email" = ?, "updated_at" = ? WHERE "registrations"."id" = 6[0m  [["email", "papa@gma.com"], ["updated_at", Fri, 12 Dec 2014 14:49:52 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "registrations" SET "how_heard" = ?, "updated_at" = ? WHERE "registrations"."id" = 6  [["how_heard", "option1"], ["updated_at", Fri, 12 Dec 2014 14:50:28 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
