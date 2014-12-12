@@ -1,0 +1,192 @@
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEvents (20121121153536)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "location" varchar(255), "price" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20121121153536"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddFieldsToEvents (20121121175436)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "events" ADD "starts_at" datetime[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "events" ADD "description" text
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20121121175436"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to AddImageFileAndCapacityToEvents (20121210230623)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "events" ADD "image_file_name" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "events" ADD "capacity" integer DEFAULT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20121210230623"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.7ms)[0m  [1mINSERT INTO "events" ("capacity", "created_at", "description", "image_file_name", "location", "name", "price", "starts_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["capacity", 75], ["created_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00], ["description", "Join us for a fun evening of bug smashing! It's a great way to get involved in open source projects whether you're reporting bugs, fixing bugs, or even inadvertently creating a few bugs!"], ["image_file_name", "bugsmash.png"], ["location", "Wynkoop in LoDo, Denver, CO"], ["name", "BugSmash"], ["price", #<BigDecimal:7fe6dc9fddd0,'0.0',9(18)>], ["starts_at", Sun, 22 Mar 2015 07:38:23 UTC +00:00], ["updated_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("capacity", "created_at", "description", "image_file_name", "location", "name", "price", "starts_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["capacity", 100], ["created_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00], ["description", "Got a killer app idea you've been itching to work on? Hunker down at the Hackathon! This is an intense, focused day of hacking on anything you want. The entry fee goes toward a bounty of cash and prizes for winners in a variety of categories."], ["image_file_name", "hackathon.png"], ["location", "Buffalo Billiards, Austin, TX"], ["name", "Hackathon"], ["price", #<BigDecimal:7fe6dca140d0,'0.15E2',9(36)>], ["starts_at", Sat, 11 Apr 2015 07:38:23 UTC +00:00], ["updated_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("capacity", "created_at", "description", "image_file_name", "location", "name", "price", "starts_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["capacity", 50], ["created_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00], ["description", "Kata Camp is where developers go to practice their craft without the interruptions of a typical project. Forget about having to actually ship something. Tell your manager you're going to Kata Camp for the day! Price includes a buffet lunch and a leather-bound journal to record your kata achievements."], ["image_file_name", "katacamp.png"], ["location", "Double R Ranch, Dallas, TX"], ["name", "Kata Camp"], ["price", #<BigDecimal:7fe6d96e91d8,'0.75E2',9(36)>], ["starts_at", Mon, 11 May 2015 07:38:23 UTC +00:00], ["updated_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("capacity", "created_at", "description", "image_file_name", "location", "name", "price", "starts_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["capacity", 15], ["created_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00], ["description", "Start your day off right with a good cup of Joe while you sling some code. By the time you hit the office, you'll be all tuned up!"], ["image_file_name", "coffeecode.png"], ["location", "Stumptown Coffee, Portland, OR"], ["name", "Coffee and Code"], ["price", #<BigDecimal:7fe6d96f24e0,'0.0',9(18)>], ["starts_at", Sun, 31 May 2015 07:38:23 UTC +00:00], ["updated_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("capacity", "created_at", "description", "image_file_name", "location", "name", "price", "starts_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["capacity", 150], ["created_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00], ["description", "Brew up the tastiest Mac app and win! Entry fee includes a stylish apron."], ["image_file_name", "cocoacookoff.png"], ["location", "1 Infinite Loop, Cupertino, CA"], ["name", "Cocoa Cook-off"], ["price", #<BigDecimal:7fe6d96fb5b8,'0.25E2',9(36)>], ["starts_at", Wed, 10 Jun 2015 07:38:23 UTC +00:00], ["updated_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("capacity", "created_at", "description", "image_file_name", "location", "name", "price", "starts_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["capacity", 200], ["created_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00], ["description", "Join us for a non-stop evening of Muppet mania! We'll watch all the hits (and flops), starting with the classics from back in the day and ending with the latest release."], ["image_file_name", "moviemarathon.png"], ["location", "Disney Theatre, Orlando, FL"], ["name", "Muppets Movie Marathon"], ["price", #<BigDecimal:7fe6d97006a8,'0.15E2',9(36)>], ["starts_at", Sat, 20 Jun 2015 07:38:23 UTC +00:00], ["updated_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("capacity", "created_at", "description", "image_file_name", "location", "name", "price", "starts_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["capacity", 75], ["created_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00], ["description", "Come sing along with your favorite country band in Music City! Cover charge includes a confidence-boosting beverage of your choice and entry into the YeeHaw Yodelin' contest."], ["image_file_name", "karaoke.png"], ["location", "Hokey Pokey Saloon, Nashville, TN"], ["name", "Hokey Karaoke"], ["price", #<BigDecimal:7fe6d97097a8,'0.25E2',9(36)>], ["starts_at", Tue, 30 Jun 2015 07:38:23 UTC +00:00], ["updated_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("capacity", "created_at", "description", "image_file_name", "location", "name", "price", "starts_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["capacity", 30], ["created_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00], ["description", "Come meet local Rails developers and enjoy a technical talk by a local celebrity. This week's topic is a comparison of testing frameworks, templating systems, and whether to use tabs or spaces."], ["image_file_name", "placeholder.png"], ["location", "Reston, VA"], ["name", "Rails User Group"], ["price", #<BigDecimal:7fe6dca36ae0,'0.0',9(18)>], ["starts_at", Wed, 10 Dec 2014 07:38:23 UTC +00:00], ["updated_at", Fri, 12 Dec 2014 07:38:23 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-12 09:38:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events" WHERE (starts_at >= '2014-12-12 07:38:44.538493') ORDER BY "events"."starts_at" ASC
+  Rendered events/index.html.erb within layouts/application (55.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidebar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1466ms (Views: 1439.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2014-12-12 09:38:46 +0200
+
+
+Started GET "/events/1" for 127.0.0.1 at 2014-12-12 09:39:00 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 20ms (Views: 15.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2014-12-12 09:39:03 +0200
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered events/_form.html.erb (26.3ms)
+  Rendered events/edit.html.erb within layouts/application (28.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2014-12-12 09:39:08 +0200
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE (starts_at >= '2014-12-12 07:39:08.824226') ORDER BY "events"."starts_at" ASC[0m
+  Rendered events/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2014-12-12 09:39:12 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered events/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/2/edit" for 127.0.0.1 at 2014-12-12 09:39:16 +0200
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered events/_form.html.erb (9.7ms)
+  Rendered events/edit.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2014-12-12 09:39:23 +0200
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE (starts_at >= '2014-12-12 07:39:23.801253') ORDER BY "events"."starts_at" ASC
+  Rendered events/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.4ms)
