@@ -3319,3 +3319,2109 @@ Migrating to CreateRegistrations (20141212134353)
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.6ms)[0m  UPDATE "registrations" SET "how_heard" = ?, "updated_at" = ? WHERE "registrations"."id" = 6  [["how_heard", "option1"], ["updated_at", Fri, 12 Dec 2014 14:50:28 UTC +00:00]]
   [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-13 12:17:06 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (1.3ms)[0m  SELECT "events".* FROM "events" WHERE (starts_at >= '2014-12-13 10:17:06.997012') ORDER BY "events"."starts_at" ASC
+  Rendered events/index.html.erb within layouts/application (58.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_sidebar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 394ms (Views: 364.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" WHERE (starts_at >= '2014-12-13 10:17:07.378659') ORDER BY "events"."starts_at" ASC[0m
+  Rendered events/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2014-12-13 12:17:07 +0200
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:17:18 +0200
+
+SyntaxError (/Users/mpa/RubymineProjects/events/app/controllers/registrations_controller.rb:7: syntax error, unexpected end-of-input):
+  activesupport (4.0.10) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.10) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.10) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.10) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.10) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.10) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.10) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.10) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.10) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.10) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.10) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.10) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.10) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.10) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.10) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:373:in `_run__4531065859660594110__call__callbacks'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:17:32 +0200
+Processing by RegistrationsController#index as HTML
+Completed 500 Internal Server Error in 11ms
+
+ActionView::MissingTemplate (Missing template registrations/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/mpa/RubymineProjects/events/app/views"
+):
+  actionpack (4.0.10) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.10) lib/action_view/lookup_context.rb:122:in `find'
+  actionpack (4.0.10) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.10) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.10) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.10) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.10) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.10) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.10) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.10) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.10) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.10) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.10) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.10) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.10) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.10) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:403:in `_run__2902721516455643464__process_action__callbacks'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.10) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.10) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.10) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.10) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.10) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.10) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.10) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:373:in `_run__4531065859660594110__call__callbacks'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:22:29 +0200
+Processing by RegistrationsController#index as HTML
+  Rendered registrations/index.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 33ms
+
+SyntaxError (/Users/mpa/RubymineProjects/events/app/views/registrations/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/mpa/RubymineProjects/events/app/views/registrations/index.html.erb:11: syntax error, unexpected end-of-input, expecting keyword_end):
+  actionpack (4.0.10) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.10) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.10) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.10) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.10) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.10) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.10) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.10) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.10) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.10) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.10) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.10) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.10) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.10) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.10) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.10) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.10) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.10) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.10) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.10) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.10) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.10) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.10) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.10) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.10) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:403:in `_run__2902721516455643464__process_action__callbacks'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.10) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.10) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.10) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.10) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.10) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.10) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.10) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:373:in `_run__4531065859660594110__call__callbacks'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:22:50 +0200
+Processing by RegistrationsController#index as HTML
+  Rendered registrations/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (/Users/mpa/RubymineProjects/events/app/views/registrations/index.html.erb:9: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/mpa/RubymineProjects/events/app/views/registrations/index.html.erb:11: syntax error, unexpected end-of-input, expecting keyword_end):
+  actionpack (4.0.10) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.10) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.10) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.10) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.10) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.10) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.10) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.10) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.10) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.10) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.10) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.10) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.10) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.10) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.10) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.10) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.10) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.10) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.10) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.10) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.10) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.10) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.10) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.10) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.10) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.10) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:403:in `_run__2902721516455643464__process_action__callbacks'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.10) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.10) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.10) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.10) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.10) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.10) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.10) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.10) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.10) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.10) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:373:in `_run__4531065859660594110__call__callbacks'
+  activesupport (4.0.10) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.9ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:22:53 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (4.4ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (2.5ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (131.5ms)
+Completed 500 Internal Server Error in 135ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    3: </header>
+    4: <ol id="registrations">
+    5:   <% @registrations.each do |r|%>
+    6:   <li><%=mail_to(r.email,r.name)%>(<%=r.event.name%>)</li>
+    7:       <%end%%>
+    8: </ol
+  app/views/registrations/index.html.erb:6:in `block in _app_views_registrations_index_html_erb___3102989147403474382_70363573861600'
+  app/views/registrations/index.html.erb:5:in `_app_views_registrations_index_html_erb___3102989147403474382_70363573861600'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.8ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:23:49 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.6ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined method `%' for #<Array:0x007ffd94c4f768>):
+    5:   <% @registrations.each do |r|%>
+    6:   <li><%=mail_to(r.email,r.name)%>(<%=r.event%>)</li>
+    7:       <%end%%>
+    8: </ol
+  app/views/registrations/index.html.erb:8:in `_app_views_registrations_index_html_erb___3102989147403474382_70363542079980'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.4ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:24:16 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.3ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `%' for #<Array:0x007ffd93bbf600>):
+    5:   <% @registrations.each do |r|%>
+    6:   <li><%=mail_to(r.email,r.name)%>(<%=r.event%>)</li>
+    7:       <%end%%>
+    8: </ol>
+  app/views/registrations/index.html.erb:8:in `_app_views_registrations_index_html_erb___3102989147403474382_70363543881740'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.9ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:24:19 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.4ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `%' for #<Array:0x007ffd97927420>):
+    5:   <% @registrations.each do |r|%>
+    6:   <li><%=mail_to(r.email,r.name)%>(<%=r.event%>)</li>
+    7:       <%end%%>
+    8: </ol>
+  app/views/registrations/index.html.erb:8:in `_app_views_registrations_index_html_erb___3102989147403474382_70363543881740'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.3ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:24:28 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.4ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `%' for #<Array:0x007ffd94f8e618>):
+    5:   <% @registrations.each do |r|%>
+    6:   <li><%=mail_to(r.email,r.name)%>(<%=r.event%>)</li>
+    7:       <%end%%>
+    8: </ol>
+  app/views/registrations/index.html.erb:8:in `_app_views_registrations_index_html_erb___3102989147403474382_70363543881740'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.5ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:24:30 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.3ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:31 +0200
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:24:54 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.6ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 12:24:55 +0200
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:24:56 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.3ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    3: </header>
+    4: <ol id="registrations">
+    5:   <% @registrations.each do |r|%>
+    6:   <li><%=mail_to(r.email,r.name)%>(<%=r.event.name%>)</li>
+    7:       <%end%>
+    8: </ol>
+  app/views/registrations/index.html.erb:6:in `block in _app_views_registrations_index_html_erb___3102989147403474382_70363545034940'
+  app/views/registrations/index.html.erb:5:in `_app_views_registrations_index_html_erb___3102989147403474382_70363545034940'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.9ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:24:58 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.3ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    3: </header>
+    4: <ol id="registrations">
+    5:   <% @registrations.each do |r|%>
+    6:   <li><%=mail_to(r.email,r.name)%>(<%=r.event.name%>)</li>
+    7:       <%end%>
+    8: </ol>
+  app/views/registrations/index.html.erb:6:in `block in _app_views_registrations_index_html_erb___3102989147403474382_70363545034940'
+  app/views/registrations/index.html.erb:5:in `_app_views_registrations_index_html_erb___3102989147403474382_70363545034940'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.6ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:25:12 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.3ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    3: </header>
+    4: <ol id="registrations">
+    5:   <% @registrations.each do |r|%>
+    6:   <li><%=mail_to(r.email,r.name)%>(<%=r.event.name%>)</li>
+    7:       <%end%>
+    8: </ol>
+  app/views/registrations/index.html.erb:6:in `block in _app_views_registrations_index_html_erb___3102989147403474382_70363545034940'
+  app/views/registrations/index.html.erb:5:in `_app_views_registrations_index_html_erb___3102989147403474382_70363545034940'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:25:15 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.4ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `price' for nil:NilClass):
+    3: </header>
+    4: <ol id="registrations">
+    5:   <% @registrations.each do |r|%>
+    6:   <li><%=mail_to(r.email,r.name)%>(<%=r.event.price%>)</li>
+    7:       <%end%>
+    8: </ol>
+  app/views/registrations/index.html.erb:6:in `block in _app_views_registrations_index_html_erb___3102989147403474382_70363573332180'
+  app/views/registrations/index.html.erb:5:in `_app_views_registrations_index_html_erb___3102989147403474382_70363573332180'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.6ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:25:25 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.5ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 12:25:26 +0200
+  [1m[36mRegistration Load (2.0ms)[0m  [1mSELECT "registrations".* FROM "registrations"[0m
+  [1m[35mRegistration Load (0.3ms)[0m  SELECT "registrations".* FROM "registrations" ORDER BY "registrations"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mRegistration Load (0.5ms)[0m  [1mSELECT "registrations".* FROM "registrations" ORDER BY "registrations"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (18.9ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "registrations"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "events"
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mRegistration Load (0.9ms)[0m  SELECT "registrations".* FROM "registrations" WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "registrations" WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (4.1ms)[0m  [1mUPDATE "registrations" SET "email" = ?, "how_heard" = ?, "updated_at" = ? WHERE "registrations"."id" = 1[0m  [["email", "larry@page.com"], ["how_heard", "Newsletter"], ["updated_at", Sat, 13 Dec 2014 10:35:43 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:36:59 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (1.8ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (60.1ms)
+Completed 500 Internal Server Error in 86ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    3: </header>
+    4: <ol id="registrations">
+    5:   <% @registrations.each do |r|%>
+    6:   <li><%=mail_to(r.email,r.name)%>(<%=r.event.name%>)</li>
+    7:       <%end%>
+    8: </ol>
+  app/views/registrations/index.html.erb:6:in `block in _app_views_registrations_index_html_erb___3102989147403474382_70363551045560'
+  app/views/registrations/index.html.erb:5:in `_app_views_registrations_index_html_erb___3102989147403474382_70363551045560'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.9ms)
+  [1m[36mSQL (2.3ms)[0m  [1mDELETE FROM "registrations"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "registrations"
+  [1m[36mRegistration Load (0.5ms)[0m  [1mSELECT "registrations".* FROM "registrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "registrations" ("created_at", "email", "event_id", "how_heard", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 13 Dec 2014 10:40:18 UTC +00:00], ["email", "papidakis@gmail.com"], ["event_id", 1], ["how_heard", "Newsletter"], ["name", "Manolis Papidakis"], ["updated_at", Sat, 13 Dec 2014 10:40:18 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "registrations" ("created_at", "email", "event_id", "how_heard", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 13 Dec 2014 10:43:03 UTC +00:00], ["email", "mike@pragmatic.com"], ["event_id", 1], ["how_heard", "BlogPost"], ["name", "Mike Clark"], ["updated_at", Sat, 13 Dec 2014 10:43:03 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "registrations" ("created_at", "email", "event_id", "how_heard", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 13 Dec 2014 10:44:13 UTC +00:00], ["email", "nicole@pragmatic.com"], ["event_id", 1], ["how_heard", "option1"], ["name", "Nicole Clark"], ["updated_at", Sat, 13 Dec 2014 10:44:13 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "registrations" WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mEvent Load (1.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.8ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered registrations/index.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 12:44:41 +0200
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "registrations" ("created_at", "email", "event_id", "how_heard", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 13 Dec 2014 10:47:27 UTC +00:00], ["email", "papidakia@gmail.com"], ["event_id", 10], ["how_heard", "Newsletter"], ["name", "Manolis Papidakis"], ["updated_at", Sat, 13 Dec 2014 10:47:27 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[35mRegistration Load (0.7ms)[0m  SELECT "registrations".* FROM "registrations"
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered registrations/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 12:47:35 +0200
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "registrations" ("created_at", "email", "event_id", "how_heard", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 13 Dec 2014 10:49:28 UTC +00:00], ["email", "mike@pragmatic.com"], ["event_id", 3], ["how_heard", "BlogPost"], ["name", "Mike Clark"], ["updated_at", Sat, 13 Dec 2014 10:49:28 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+Processing by RegistrationsController#index as HTML
+  [1m[36mRegistration Load (8.5ms)[0m  [1mSELECT "registrations".* FROM "registrations"[0m
+  [1m[35mEvent Load (1.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mEvent Load (0.1ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered registrations/index.html.erb within layouts/application (36.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 77.0ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 12:49:33 +0200
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:54:25 +0200
+Processing by RegistrationsController#index as HTML
+Completed 404 Not Found in 20ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.9ms)
+
+
+Started GET "/registration" for 127.0.0.1 at 2014-12-13 12:54:28 +0200
+
+ActionController::RoutingError (No route matches [GET] "/registration"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (27.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (66.9ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:54:39 +0200
+Processing by RegistrationsController#index as HTML
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/registrations?event_id:1" for 127.0.0.1 at 2014-12-13 12:54:57 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id:1"=>nil}
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.7ms)
+
+
+Started GET "/registrations?event_id:1" for 127.0.0.1 at 2014-12-13 12:55:00 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id:1"=>nil}
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.8ms)
+
+
+Started GET "/registrations?event_id:1" for 127.0.0.1 at 2014-12-13 12:55:01 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id:1"=>nil}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (57.8ms)
+
+
+Started GET "/registrations?event_id:1" for 127.0.0.1 at 2014-12-13 12:55:06 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id:1"=>nil}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.6ms)
+
+
+Started GET "/registrations?event_id=1" for 127.0.0.1 at 2014-12-13 12:55:27 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.5ms)
+
+
+Started GET "/registrations?event_id=1" for 127.0.0.1 at 2014-12-13 12:55:29 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+
+
+Started GET "/registrations?event_id=1" for 127.0.0.1 at 2014-12-13 12:55:32 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:56:29 +0200
+Processing by RegistrationsController#index as HTML
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE (starts_at >= '2014-12-13 10:56:32.270499') ORDER BY "events"."starts_at" ASC[0m
+  Rendered events/index.html.erb within layouts/application (28.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 46ms (Views: 41.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2014-12-13 12:56:32 +0200
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 12:56:40 +0200
+Processing by RegistrationsController#index as HTML
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.5ms)
+
+
+Started GET "/registrations?event_id=1" for 127.0.0.1 at 2014-12-13 12:56:56 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.4ms)
+
+
+Started GET "/registrations?event_id=2" for 127.0.0.1 at 2014-12-13 12:57:05 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"2"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/registrations?event_id=2" for 127.0.0.1 at 2014-12-13 13:00:45 +0200
+
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (179.9ms)
+
+
+Started GET "/registrations" for 127.0.0.1 at 2014-12-13 13:00:56 +0200
+
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  actionpack (4.0.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.10) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.10) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.10) lib/rails/engine.rb:511:in `call'
+  railties (4.0.10) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mpa/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (39.5ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (1.2ms)[0m  SELECT "events".* FROM "events" WHERE (starts_at >= '2014-12-13 11:01:00.635502') ORDER BY "events"."starts_at" ASC
+  Rendered events/index.html.erb within layouts/application (29.5ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 47.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:00 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-13 13:01:01 +0200
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2014-12-13 13:01:03 +0200
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_errors.html.erb (16.0ms)
+  Rendered events/_form.html.erb (45.7ms)
+  Rendered events/edit.html.erb within layouts/application (47.9ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2014-12-13 13:01:04 +0200
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:01:09 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.1ms)
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:01:29 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.0ms)
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:01:32 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:02:06 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.8ms)
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:02:08 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 9ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:02:22 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 28ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.5ms)
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:02:25 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.7ms)
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:03:26 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 13ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.6ms)
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:03:28 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Event without an ID):
+  app/controllers/registrations_controller.rb:3:in `index'
+
+
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /Users/mpa/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.7ms)
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:04:31 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mRegistration Load (8.9ms)[0m  [1mSELECT "registrations".* FROM "registrations" WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered registrations/index.html.erb within layouts/application (57.3ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_sidebar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 582ms (Views: 371.5ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 13:04:32 +0200
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2014-12-13 13:04:33 +0200
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2014-12-13 13:04:33 +0200
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2014-12-13 13:04:33 +0200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-12-13 13:04:33 +0200
+
+
+Started GET "/events/1" for 127.0.0.1 at 2014-12-13 13:12:32 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.8ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (51.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_sidebar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 109ms (Views: 80.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2014-12-13 13:12:32 +0200
+
+
+Started GET "/events" for 127.0.0.1 at 2014-12-13 13:12:41 +0200
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events" WHERE (starts_at >= '2014-12-13 11:12:41.569915') ORDER BY "events"."starts_at" ASC
+  Rendered events/index.html.erb within layouts/application (38.8ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2014-12-13 13:12:41 +0200
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2014-12-13 13:12:41 +0200
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2014-12-13 13:12:41 +0200
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2014-12-13 13:12:41 +0200
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2014-12-13 13:12:41 +0200
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2014-12-13 13:12:41 +0200
+
+
+Started GET "/events/1" for 127.0.0.1 at 2014-12-13 13:12:43 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.5ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[35mEvent Load (2.5ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1mSELECT "registrations".* FROM "registrations" WHERE "registrations"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered registrations/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 21.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:00 +0200
+
+
+Started GET "/events/10/registrations" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"10"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35mRegistration Load (0.1ms)[0m  SELECT "registrations".* FROM "registrations" WHERE "registrations"."event_id" = ?  [["event_id", 10]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered registrations/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 13:13:06 +0200
+
+
+Started GET "/events/10" for 127.0.0.1 at 2014-12-13 13:13:10 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered events/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-12-13 13:13:10 +0200
+
+
+Started GET "/events/10" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mEvent Load (1.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  Rendered events/show.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 65ms (Views: 48.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-12-13 13:15:47 +0200
+
+
+Started GET "/events/10/registrations" for 127.0.0.1 at 2014-12-13 13:15:50 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"10"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "10"]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1mSELECT "registrations".* FROM "registrations" WHERE "registrations"."event_id" = ?[0m  [["event_id", 10]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered registrations/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2014-12-13 13:15:53 +0200
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE (starts_at >= '2014-12-13 11:15:53.796763') ORDER BY "events"."starts_at" ASC[0m
+  Rendered events/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bugsmash.png" for 127.0.0.1 at 2014-12-13 13:15:53 +0200
+
+
+Started GET "/assets/hackathon.png" for 127.0.0.1 at 2014-12-13 13:15:53 +0200
+
+
+Started GET "/assets/moviemarathon.png" for 127.0.0.1 at 2014-12-13 13:15:53 +0200
+
+
+Started GET "/assets/katacamp.png" for 127.0.0.1 at 2014-12-13 13:15:53 +0200
+
+
+Started GET "/assets/cocoacookoff.png" for 127.0.0.1 at 2014-12-13 13:15:53 +0200
+
+
+Started GET "/assets/coffeecode.png" for 127.0.0.1 at 2014-12-13 13:15:53 +0200
+
+
+Started GET "/assets/karaoke.png" for 127.0.0.1 at 2014-12-13 13:15:53 +0200
+
+
+Started GET "/events/1" for 127.0.0.1 at 2014-12-13 13:15:55 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/registrations" for 127.0.0.1 at 2014-12-13 13:15:57 +0200
+Processing by RegistrationsController#index as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRegistration Load (0.2ms)[0m  SELECT "registrations".* FROM "registrations" WHERE "registrations"."event_id" = ?  [["event_id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered registrations/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.5ms)

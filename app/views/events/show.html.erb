@@ -23,6 +23,10 @@
   <p>
     <%= pluralize(@event.capacity, 'spot') %>
   </p>
+
+  <p>
+    <%=link_to "Who is registered",event_registrations_path(@event)%>
+  </p>
   
   <footer>
     <nav>
