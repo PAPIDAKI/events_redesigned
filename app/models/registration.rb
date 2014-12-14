@@ -3,7 +3,7 @@ class Registration < ActiveRecord::Base
 
   validates :name,presence:true
   validates :email,format:{with:/(\S+)@(\S+)/}
-  HOW_HEARD_OPTIONS= %w(option1 Newsletter BlogPost Twitter 'Web Search' Other)
+  HOW_HEARD_OPTIONS= %w(Newsletter BlogPost Twitter WebSearch Friend Other)
   validates :how_heard,
              inclusion: {in: HOW_HEARD_OPTIONS}
 

@@ -29,6 +29,7 @@
   </p>
   
   <footer>
+    <%=link_to "Register!",new_event_registration_path(@event),class:"button ok register"%>
     <nav>
       <%= link_to 'Edit', edit_event_path(@event), class: 'button' %>
       <%= link_to 'Delete', @event, 

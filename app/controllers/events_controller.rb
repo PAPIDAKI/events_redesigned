@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   
   def index
-    @events = Event.upcoming    
+    @events = Event.upcoming
   end
 
   def show
@@ -45,4 +45,6 @@ private
   def event_params
     params.require(:event).permit(:name, :description, :location, :price, :starts_at, :image_file_name, :capacity)
   end
+
+
 end
