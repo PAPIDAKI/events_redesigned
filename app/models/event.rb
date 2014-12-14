@@ -22,6 +22,15 @@ class Event < ActiveRecord::Base
     
   def free?
     price.blank? || price.zero?
-  end  
+  end
+
+  def spots_left
+    capacity-registrations.count
+  end
+
+  def sold_out?
+    spots_left.zero?
+  end
+
 
 end

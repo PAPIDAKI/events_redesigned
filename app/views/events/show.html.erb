@@ -29,10 +29,11 @@
   </p>
   
   <footer>
-    <%=link_to "Register!",new_event_registration_path(@event),class:"button ok register"%>
+    <%=register_link(@event)%>
+    <p><%= pluralize(@event.spots_left,'spot') %> available</p>
     <nav>
       <%= link_to 'Edit', edit_event_path(@event), class: 'button' %>
-      <%= link_to 'Delete', @event, 
+      <%= link_to 'Delete', @event,
                   class: 'button',
                   method: :delete, data: { confirm: 'Are you sure?' } %>
     </nav>
