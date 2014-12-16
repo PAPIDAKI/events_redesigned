@@ -1,5 +1,7 @@
 Events::Application.routes.draw do
 
+  resources :users
+
   root "events#index"
   # get "events"     => "events#index"
   # get "events/:id" => "events#show", as: "event"
