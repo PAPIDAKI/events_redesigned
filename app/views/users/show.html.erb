@@ -7,10 +7,12 @@
 
 <footer>
   <nav>
+    <% if current_user?(@user)%>
     <%=link_to "Edit Acount",edit_user_path(@user),class:'button'%>
     <%=link_to "Delete Acount",@user,method: :delete,
                 data: {confirm: "Are you sure?"},
                 class:'button'%>
+    <%end%>
 
   </nav>
 </footer>
